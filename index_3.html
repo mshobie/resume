@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammad Shoaib Osmani - Professional Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0e1117;
+  --bg2:      #141922;
+  --bg3:      #090c12;
+  --border:   #1e2535;
+  --border2:  #2e3f52;
+  --teal:     #2dd4bf;
+  --teal-dim: #5eead4;
+  --teal-bg:  rgba(45,212,191,0.10);
+  --teal-bd:  rgba(45,212,191,0.22);
+  --amber:    #fb923c;
+  --amber-dim:#fdba74;
+  --amber-bg: rgba(251,146,60,0.10);
+  --amber-bd: rgba(251,146,60,0.22);
+  --t1: #f8fafc;
+  --t2: #e2e8f0;
+  --t3: #b0bec5;
+  --t4: #64748b;
+  --green: #34d399;
+  --green-bg: rgba(52,211,153,0.10);
+  --green-bd: rgba(52,211,153,0.20);
+  --sky:    #38bdf8;
+  --purple: #a78bfa;
+  --ease:   cubic-bezier(0.4,0,0.2,1);
+  --r: 10px;
+  --fs-body: 16px;
+  --lh: 1.75;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--t2);
+  line-height: var(--lh);
+  font-size: var(--fs-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.nav {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto;
+  padding: 0 2rem;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+.nav-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--t1); letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.nav-name span { color: var(--teal); }
+.nav-links { display: flex; gap: 0; }
+.nav-links a {
+  color: var(--t4); text-decoration: none;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0 1rem; height: 58px;
+  display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--t2); border-bottom-color: var(--border2); }
+.nav-award {
+  font-size: 0.74rem; font-weight: 500;
+  background: var(--amber-bg); color: var(--amber-dim);
+  border: 1px solid var(--amber-bd);
+  padding: 0.3rem 0.85rem; border-radius: 20px;
+  white-space: nowrap;
+}
+.nav-menu-btn {
+  display: none; background: none; border: none;
+  color: var(--t3); cursor: pointer; padding: 0.5rem;
+  font-size: 1.4rem; line-height: 1;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  padding: 3.5rem 2rem 3rem;
+}
+.hero-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 2.5rem; align-items: center;
+}
+.hero-photo {
+  width: 110px; height: 110px;
+  border-radius: 16px; overflow: hidden;
+  border: 2px solid var(--teal-bd); flex-shrink: 0;
+  background: var(--bg2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem; font-weight: 700; color: var(--teal);
+}
+.hero-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 8%;
+}
+.hero-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800; color: var(--t1);
+  letter-spacing: -0.03em; line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+.hero-name span { color: var(--teal); }
+.hero-tagline {
+  font-size: 0.85rem; color: var(--t4);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 1.25rem; font-weight: 400;
+  line-height: 1.8;
+}
+.hero-tagline b { color: var(--t3); font-weight: 400; }
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+.hero-pill {
+  font-size: 0.78rem; padding: 0.3rem 0.8rem;
+  border-radius: 20px; letter-spacing: 0.03em; font-weight: 500;
+}
+.hero-pill.t { background: var(--teal-bg); color: var(--teal-dim); border: 1px solid var(--teal-bd); }
+.hero-pill.a { background: var(--amber-bg); color: var(--amber-dim); border: 1px solid var(--amber-bd); }
+.hero-contacts { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.hero-contact {
+  display: flex; align-items: center; gap: 0.45rem;
+  color: var(--t3); font-size: 0.88rem;
+  text-decoration: none; transition: color 0.2s;
+}
+.hero-contact:hover { color: var(--teal); }
+.hero-contact svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── SECTION BASE ── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 4rem 2rem; }
+.sec-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--t1); margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+.sec-rule { width: 30px; height: 2.5px; background: var(--teal); margin-bottom: 1.5rem; border-radius: 2px; }
+.sec-intro {
+  font-size: 1rem; color: var(--t3); line-height: 1.8;
+  max-width: 680px; margin-bottom: 2.5rem;
+}
+
+/* ── ROLE TABS ── */
+.roles-section { border-top: 1px solid var(--border); }
+.role-label {
+  font-size: 0.75rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--t4);
+  margin-bottom: 1rem; font-weight: 500;
+}
+.role-tabs { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 2.5rem; }
+.role-tab {
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--border);
+  background: var(--bg2); color: var(--t3);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.85rem; font-weight: 400;
+  cursor: pointer; border-radius: 8px;
+  transition: all 0.15s; text-align: left; line-height: 1.4;
+}
+.role-tab .tab-cat {
+  display: block; font-size: 0.68rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--t4); margin-bottom: 0.15rem;
+}
+.role-tab:hover { border-color: var(--border2); color: var(--t2); }
+.role-tab.active {
+  background: var(--teal-bg); border-color: var(--teal-bd); color: var(--teal-dim);
+}
+.role-tab.active .tab-cat { color: var(--teal); }
+
+/* ── PANEL ── */
+.role-panel { display: none; animation: fadeUp 0.25s var(--ease); }
+.role-panel.active { display: block; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem; align-items: start;
+}
+
+/* Role heading */
+.role-head { margin-bottom: 1.5rem; }
+.role-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.65rem; font-weight: 700;
+  color: var(--t1); margin-bottom: 0.25rem;
+  letter-spacing: -0.02em; line-height: 1.2;
+}
+.role-sub { font-size: 0.92rem; color: var(--t4); margin-bottom: 0.9rem; }
+.fit-row { display: flex; align-items: center; gap: 0.85rem; }
+.fit-lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--t4); white-space: nowrap; }
+.fit-track { flex: 1; max-width: 200px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.fit-fill { height: 100%; background: var(--teal); border-radius: 2px; }
+.fit-pct { font-size: 0.85rem; font-weight: 600; color: var(--teal); white-space: nowrap; }
+
+/* Profile paragraph */
+.profile-text {
+  font-size: 0.97rem; line-height: 1.8;
+  color: var(--t3); margin-bottom: 1.5rem;
+}
+.profile-text strong { color: var(--t2); font-weight: 500; }
+
+/* Strength / gap grid */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1.75rem; }
+.list-card {
+  background: var(--bg2); border-radius: var(--r);
+  padding: 1.15rem 1.25rem; border: 1px solid var(--border);
+}
+.list-card-title {
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.8rem;
+}
+.list-card-title.g { color: var(--green); }
+.list-card-title.a { color: var(--amber); }
+.list-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.list-card ul li {
+  font-size: 0.88rem; color: var(--t3);
+  padding-left: 1.1rem; position: relative; line-height: 1.55;
+}
+.list-card ul li::before {
+  content: ''; position: absolute; left: 2px; top: 7px;
+  width: 5px; height: 5px; border-radius: 50%;
+}
+.list-card.strengths li::before { background: var(--green); }
+.list-card.gaps li::before { background: var(--amber); }
+
+/* Experience bullets */
+.exp-label {
+  font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--t4);
+  font-weight: 500; margin-bottom: 1rem;
+}
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.exp-bullets li {
+  font-size: 0.95rem; color: var(--t3);
+  padding-left: 1.25rem; position: relative; line-height: 1.7;
+}
+.exp-bullets li::before {
+  content: ''; position: absolute; left: 0; top: 0.6em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--teal); opacity: 0.55;
+}
+.exp-bullets li strong { color: var(--t2); font-weight: 500; }
+
+/* Stats */
+.stats-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem; margin-top: 1.75rem;
+}
+.stat-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1rem; text-align: center;
+}
+.stat-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.7rem; font-weight: 800; color: var(--teal); line-height: 1;
+}
+.stat-lbl {
+  font-size: 0.73rem; color: var(--t4);
+  margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* ── SIDEBAR ── */
+.sidebar-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1.4rem;
+  position: sticky; top: 74px;
+}
+.sb-title {
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--t4); font-weight: 500; margin-bottom: 1rem;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+.skill-tag {
+  font-size: 0.78rem; padding: 0.25rem 0.65rem;
+  border-radius: 5px; letter-spacing: 0.01em;
+}
+.skill-tag.p { background: var(--teal-bg); color: var(--teal-dim); border: 1px solid var(--teal-bd); }
+.skill-tag.s { background: var(--bg3); color: var(--t3); border: 1px solid var(--border); }
+.sb-divider { border: none; border-top: 1px solid var(--border); margin: 1.1rem 0; }
+.sb-stat {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+}
+.sb-stat:last-of-type { border-bottom: none; }
+.sb-stat-lbl { font-size: 0.82rem; color: var(--t4); }
+.sb-stat-val { font-size: 0.88rem; color: var(--t2); font-weight: 500; }
+.cta-btn {
+  display: block; width: 100%; margin-top: 1.25rem;
+  padding: 0.75rem 1rem; background: var(--teal); color: #0e1117;
+  text-align: center; text-decoration: none;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.03em;
+  border-radius: 7px; transition: all 0.2s;
+  font-family: 'IBM Plex Sans', sans-serif; border: none; cursor: pointer;
+}
+.cta-btn:hover { background: var(--teal-dim); }
+.cta-btn.sec {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--t3); margin-top: 0.6rem;
+}
+.cta-btn.sec:hover { border-color: var(--border2); color: var(--t2); }
+
+/* ── ABOUT ── */
+.about-wrap { background: var(--bg2); border-top: 1px solid var(--border); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+.about-block-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--t1); margin-bottom: 0.65rem;
+}
+.about-block p { font-size: 0.95rem; color: var(--t3); line-height: 1.8; }
+
+/* ── CAREER ── */
+.career-wrap { border-top: 1px solid var(--border); }
+.timeline { padding-left: 1.75rem; position: relative; margin-top: 0.5rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0;
+  top: 8px; bottom: 8px; width: 1px; background: var(--border);
+}
+.tl-item { position: relative; margin-bottom: 2.5rem; }
+.tl-item::before {
+  content: ''; position: absolute; left: -1.75rem; top: 5px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--teal); border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--teal);
+}
+.tl-dates {
+  font-size: 0.75rem; color: var(--t4);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem;
+}
+.tl-role {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--t1); margin-bottom: 0.2rem;
+}
+.tl-company { font-size: 0.9rem; color: var(--t4); font-style: italic; margin-bottom: 0.6rem; }
+.tl-desc { font-size: 0.93rem; color: var(--t3); line-height: 1.75; }
+
+/* ── TOOLS ── */
+.tools-wrap { background: var(--bg2); border-top: 1px solid var(--border); }
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.9rem; margin-top: 0.5rem;
+}
+.tool-card {
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 1rem 1.1rem; border-radius: var(--r);
+}
+.tool-name { font-size: 0.92rem; font-weight: 500; color: var(--t2); margin-bottom: 0.25rem; }
+.tool-level {
+  font-size: 0.73rem; color: var(--t4);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem;
+}
+.tool-bar { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.tool-fill { height: 100%; border-radius: 2px; }
+.tool-fill.e { background: var(--teal); }
+.tool-fill.a { background: var(--sky); }
+.tool-fill.p { background: var(--purple); }
+.tool-fill.d { background: var(--t4); }
+
+/* ── EDUCATION ── */
+.edu-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; margin-top: 2.5rem;
+}
+.edu-card {
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 1.25rem; border-radius: var(--r);
+}
+.edu-year {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem; font-weight: 800;
+  color: var(--teal); margin-bottom: 0.3rem; line-height: 1;
+}
+.edu-degree { font-size: 0.9rem; font-weight: 500; color: var(--t2); margin-bottom: 0.25rem; line-height: 1.4; }
+.edu-school { font-size: 0.82rem; color: var(--t4); font-style: italic; }
+
+/* ── CONTACT ── */
+.contact-wrap { border-top: 1px solid var(--border); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-links { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 0.5rem; }
+.contact-link {
+  display: flex; align-items: center; gap: 0.85rem;
+  color: var(--t3); font-size: 0.95rem;
+  text-decoration: none; transition: color 0.2s;
+}
+.contact-link:hover { color: var(--teal); }
+.contact-icon {
+  width: 36px; height: 36px; background: var(--bg2);
+  border: 1px solid var(--border); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.contact-icon svg { width: 15px; height: 15px; }
+.contact-note {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 1.75rem; border-radius: var(--r);
+  font-size: 1rem; color: var(--t3); line-height: 1.85;
+  font-style: italic;
+}
+.contact-note cite {
+  display: block; margin-top: 1rem;
+  font-size: 0.82rem; color: var(--t4); font-style: normal;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--bg3); border-top: 1px solid var(--border);
+  padding: 1.4rem 2rem; text-align: center;
+  font-size: 0.82rem; color: var(--t4); letter-spacing: 0.04em;
+}
+
+/* ── MOBILE NAV DRAWER ── */
+.mobile-nav {
+  display: none; position: fixed; inset: 0;
+  background: rgba(9,12,18,0.97); z-index: 200;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 600;
+  color: var(--t1); text-decoration: none; letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--teal); }
+.mobile-nav-close {
+  position: absolute; top: 1.5rem; right: 1.75rem;
+  background: none; border: none; color: var(--t3);
+  font-size: 1.8rem; cursor: pointer; line-height: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .panel-grid { grid-template-columns: 1fr; }
+  .sidebar-card { position: static; }
+  .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .edu-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .nav-award { display: none; }
+  .nav-menu-btn { display: block; }
+  .hero { padding: 2.5rem 1.25rem 2rem; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
+  .hero-photo { margin: 0 auto; width: 90px; height: 90px; }
+  .hero-name { font-size: 1.8rem; }
+  .hero-contacts { justify-content: center; }
+  .hero-pills { justify-content: center; }
+  .wrap { padding: 2.5rem 1.25rem; }
+  .two-col { grid-template-columns: 1fr; }
+  .role-tabs { gap: 0.4rem; }
+  .role-tab { font-size: 0.82rem; padding: 0.5rem 0.9rem; }
+  .role-title { font-size: 1.35rem; }
+  .sec-title { font-size: 1.35rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .hero-tagline { font-size: 0.75rem; }
+  .hero-pill { font-size: 0.72rem; }
+  .tools-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="toggleNav()">&#x2715;</button>
+  <a href="#roles" onclick="toggleNav()">Role Profiles</a>
+  <a href="#about" onclick="toggleNav()">About</a>
+  <a href="#career" onclick="toggleNav()">Career</a>
+  <a href="#tools" onclick="toggleNav()">Expertise</a>
+  <a href="#contact" onclick="toggleNav()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Mohammad <span>Shoaib</span> Osmani</div>
+    <div class="nav-links">
+      <a href="#roles">Role Profiles</a>
+      <a href="#about">About</a>
+      <a href="#career">Career</a>
+      <a href="#tools">Expertise</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-award">Top Achiever MENA 2024</div>
+    <button class="nav-menu-btn" onclick="toggleNav()">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="photo.png" alt="Mohammad Shoaib Osmani" onerror="this.parentElement.innerHTML='SO'">
+    </div>
+    <div>
+      <div class="hero-name">Mohammad <span>Shoaib</span> Osmani</div>
+      <div class="hero-tagline">
+        <b>Pre-Sales</b> &nbsp;·&nbsp; <b>Business Architecture</b> &nbsp;·&nbsp; <b>Process Intelligence</b> &nbsp;·&nbsp; <b>Enterprise Architecture</b>
+      </div>
+      <div class="hero-pills">
+        <span class="hero-pill t">7+ Years GCC / MENA</span>
+        <span class="hero-pill t">ARIS Expert</span>
+        <span class="hero-pill t">Alfabet / Bizzdesign</span>
+        <span class="hero-pill t">30+ Enterprise Engagements</span>
+        <span class="hero-pill t">Dubai, UAE</span>
+        <span class="hero-pill a">Top Pre-Sales Achiever MENA 2024</span>
+      </div>
+      <div class="hero-contacts">
+        <a class="hero-contact" href="mailto:mohammadshoaibosmani@gmail.com">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          mohammadshoaibosmani@gmail.com
+        </a>
+        <a class="hero-contact" href="https://linkedin.com/in/shoaibosmani" target="_blank">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          linkedin.com/in/shoaibosmani
+        </a>
+        <span class="hero-contact">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          +971 55 202 7531
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE PROFILES -->
+<section class="roles-section" id="roles">
+<div class="wrap">
+  <div class="sec-title">Role Profiles</div>
+  <div class="sec-rule"></div>
+  <p class="sec-intro">My background spans several closely related disciplines. Select the role most relevant to your opening and see how my experience maps to it - including an honest view of where I am strong versus where I am still developing.</p>
+
+  <div class="role-label">I am hiring for:</div>
+  <div class="role-tabs">
+    <button class="role-tab active" onclick="switchRole('presales')" id="tab-presales"><span class="tab-cat">Pre-Sales</span>Solution Consultant / Sales Engineer</button>
+    <button class="role-tab" onclick="switchRole('processmining')" id="tab-processmining"><span class="tab-cat">Specialist</span>Process Mining Consultant</button>
+    <button class="role-tab" onclick="switchRole('bpm')" id="tab-bpm"><span class="tab-cat">Pre-Sales</span>BPM Pre-Sales and Advisory</button>
+    <button class="role-tab" onclick="switchRole('ea')" id="tab-ea"><span class="tab-cat">Architecture</span>Enterprise Architect / Pre-Sales EA</button>
+    <button class="role-tab" onclick="switchRole('clientside')" id="tab-clientside"><span class="tab-cat">Client Side</span>Business Transformation Advisor</button>
+    <button class="role-tab" onclick="switchRole('ai')" id="tab-ai"><span class="tab-cat">Emerging</span>AI and Intelligent Automation</button>
+  </div>
+
+  <!-- PANEL: Pre-Sales -->
+  <div class="role-panel active" id="panel-presales">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">Solution Consultant / Sales Engineer</div>
+          <div class="role-sub">Pre-Sales individual contributor with enterprise software focus</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:92%"></div></div><span class="fit-pct">Very Strong</span></div>
+        </div>
+        <p class="profile-text">This is my primary background. Over <strong>7 years</strong> I have operated as a dedicated pre-sales individual contributor, partnering with Account Executives across <strong>30+ enterprise opportunities</strong> in the GCC. I own the full cycle - from discovery and qualification through customised demonstrations, PoC delivery, RFP responses, and ROI business cases presented at board level. Consistent track record of contributing to <strong>sales target overachievement</strong> through solution-led selling.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">Strong Fit</div>
+            <ul>
+              <li>Full pre-sales cycle ownership - discovery to close</li>
+              <li>Custom demo and PoC design and delivery</li>
+              <li>RFP / RFI response authoring</li>
+              <li>ROI and value engineering at board level</li>
+              <li>C-suite and executive stakeholder engagement</li>
+              <li>AE partnership and pipeline management</li>
+              <li>GCC / MENA enterprise market knowledge</li>
+              <li>Cross-functional workshop facilitation</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Building / Developing</div>
+            <ul>
+              <li>Direct SaaS / cloud-native product experience</li>
+              <li>CRM / Salesforce pipeline tracking</li>
+              <li>Formal SE certification programmes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-label">Key Experience</div>
+        <ul class="exp-bullets">
+          <li>Spearheaded <strong>30+ enterprise pre-sales engagements</strong> across banking, government, telecom, and retail in the GCC - owning solutioning from qualification through commercial close</li>
+          <li>Developed and delivered <strong>customised demonstrations and PoCs</strong> tailored to each prospect's specific challenges - converting technical capability into visible business value</li>
+          <li>Built and presented <strong>ROI frameworks and executive business cases</strong> at C-suite and board level, directly influencing multi-year transformation investment decisions</li>
+          <li>Authored <strong>RFP and RFI responses</strong> in collaboration with product and delivery teams ensuring competitive, accurate positioning</li>
+          <li>Partnered with Account Executives to manage a <strong>multi-opportunity pipeline</strong>, aligning pre-sales effort to each stage of the sales cycle</li>
+          <li>Represented the brand at <strong>GITEX, LEAP</strong>, and regional events as a recognised domain expert</li>
+        </ul>
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-val">7+</div><div class="stat-lbl">Years Pre-Sales</div></div>
+          <div class="stat-card"><div class="stat-val">30+</div><div class="stat-lbl">Engagements</div></div>
+          <div class="stat-card"><div class="stat-val">GCC</div><div class="stat-lbl">Region</div></div>
+          <div class="stat-card"><div class="stat-val">#1</div><div class="stat-lbl">MENA 2024</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">Key Skills for this Role</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">Pre-Sales Cycle Ownership</span>
+            <span class="skill-tag p">Custom Demos and PoCs</span>
+            <span class="skill-tag p">ROI / Value Engineering</span>
+            <span class="skill-tag p">RFP Management</span>
+            <span class="skill-tag s">AE Partnership</span>
+            <span class="skill-tag s">Executive Presentations</span>
+            <span class="skill-tag s">Solution Architecture</span>
+            <span class="skill-tag s">GCC Market Knowledge</span>
+            <span class="skill-tag s">Process Intelligence Tooling</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">Years in Pre-Sales</span><span class="sb-stat-val">7+</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Engagements</span><span class="sb-stat-val">30+</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Region</span><span class="sb-stat-val">GCC / MENA</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Industries</span><span class="sb-stat-val">Banking, Gov, Telecom</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Get In Touch</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: Process Mining -->
+  <div class="role-panel" id="panel-processmining">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">Process Mining Consultant</div>
+          <div class="role-sub">Process intelligence, event-log analysis, and operational diagnostics</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:82%"></div></div><span class="fit-pct">Strong Fit</span></div>
+        </div>
+        <p class="profile-text">Process mining is one of my core specialisations. I have spent years building and demonstrating <strong>enterprise process mining solutions</strong> to clients across banking, government, and telecom in the GCC. My work sits primarily on the <strong>pre-sales and advisory side</strong> - designing PoCs that use real event-log data to surface insights. Primary platform expertise is in <strong>ARIS Process Mining</strong>.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">Strong Fit</div>
+            <ul>
+              <li>Process mining PoC design using real event-log data</li>
+              <li>Process discovery, conformance, and enhancement</li>
+              <li>KPI dashboard design and visualisation</li>
+              <li>Use-case identification for banking and government</li>
+              <li>Translating mining insights into executive narratives</li>
+              <li>AML / KYC process transparency use cases</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Building / Developing</div>
+            <ul>
+              <li>Celonis / SAP Signavio hands-on experience</li>
+              <li>Python-based process mining (pm4py)</li>
+              <li>Post-sales implementation delivery</li>
+              <li>SQL-level event-log extraction pipelines</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-label">Key Experience</div>
+        <ul class="exp-bullets">
+          <li>Designed and delivered <strong>process mining PoCs</strong> for GCC government entities - surfacing process inefficiencies, SLA breaches, and automation opportunities from real event data</li>
+          <li>Built customised <strong>process intelligence demonstrations</strong> for banking prospects around AML/KYC workflows, loan origination, and customer onboarding</li>
+          <li>Created <strong>analytics dashboards</strong> integrating process mining outputs with KPI visualisations to support executive decision-making</li>
+          <li>Positioned process mining as an <strong>audit and compliance enabler</strong> for regulated-industry clients - linking mining insights to internal control frameworks</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">Key Skills for this Role</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">Process Mining (ARIS)</span>
+            <span class="skill-tag p">PoC Design and Delivery</span>
+            <span class="skill-tag p">Analytics Dashboards</span>
+            <span class="skill-tag s">Process Discovery</span>
+            <span class="skill-tag s">Conformance Checking</span>
+            <span class="skill-tag s">Event-Log Analysis</span>
+            <span class="skill-tag s">Banking / Gov Use Cases</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">Primary Platform</span><span class="sb-stat-val">ARIS Process Mining</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Key Industries</span><span class="sb-stat-val">Banking, Government</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Role Type</span><span class="sb-stat-val">Pre-Sales / Advisory</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Get In Touch</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: BPM -->
+  <div class="role-panel" id="panel-bpm">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">BPM Pre-Sales Consultant and Advisor</div>
+          <div class="role-sub">Business process management, transformation advocacy, and value realisation</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:90%"></div></div><span class="fit-pct">Very Strong Fit</span></div>
+        </div>
+        <p class="profile-text">BPM is the core of my professional background. As a pre-sales business architect specialising in one of the world's leading <strong>enterprise BPM platforms</strong> (ARIS), I have spent 7+ years positioning, demonstrating, and advising on business process management at enterprise scale. My focus has always been on translating <strong>BPM methodology into visible commercial value</strong>, not just tool adoption.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">Strong Fit</div>
+            <ul>
+              <li>Enterprise BPM platform expertise (ARIS)</li>
+              <li>As-is process discovery and documentation</li>
+              <li>Process governance and RACI design</li>
+              <li>BPM transformation roadmap development</li>
+              <li>BPMN 2.0 and EPC modelling</li>
+              <li>C-suite BPM advisory and change narrative</li>
+              <li>Process re-engineering workshop facilitation</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Building / Developing</div>
+            <ul>
+              <li>Post-sales BPM implementation delivery</li>
+              <li>Lean Six Sigma formal certification</li>
+              <li>ServiceNow / Appian / Pega experience</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-label">Key Experience</div>
+        <ul class="exp-bullets">
+          <li>Delivered <strong>BPM transformation roadmap solutioning</strong> for 30+ GCC enterprises - demonstrating the full journey from as-is discovery through re-engineering to governance adoption</li>
+          <li>Built <strong>customised process governance demonstrations</strong> illustrating RACI mapping, policy-to-process linkage, and cross-functional dependency modelling</li>
+          <li>Facilitated <strong>executive workshops</strong> with COOs and transformation leads to identify BPM priorities and build consensus around the value of process standardisation</li>
+          <li>Developed <strong>BPM business cases</strong> quantifying operational savings, compliance improvement, and cycle-time reduction presented at board level</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">Key Skills for this Role</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">BPM Platform Expertise</span>
+            <span class="skill-tag p">Process Governance</span>
+            <span class="skill-tag p">BPM Roadmaps</span>
+            <span class="skill-tag s">BPMN 2.0 / EPC</span>
+            <span class="skill-tag s">As-Is / To-Be Design</span>
+            <span class="skill-tag s">Process Re-engineering</span>
+            <span class="skill-tag s">ROI Framing</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">Platform</span><span class="sb-stat-val">ARIS (Expert)</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Approach</span><span class="sb-stat-val">Pre-Sales / Advisory</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Focus</span><span class="sb-stat-val">Value Realisation</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Get In Touch</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: EA -->
+  <div class="role-panel" id="panel-ea">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">Enterprise Architecture Pre-Sales and Advisor</div>
+          <div class="role-sub">EA tooling, strategic portfolio management, and architecture alignment</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:80%"></div></div><span class="fit-pct">Strong Fit</span></div>
+        </div>
+        <p class="profile-text">I have worked with two of the leading enterprise architecture and portfolio management platforms - <strong>ARIS</strong> for business and process architecture, and <strong>Alfabet (now Bizzdesign)</strong> for strategic portfolio management and IT architecture alignment. My experience is primarily pre-sales and advisory: building demonstrations and business cases that show CIOs how these platforms connect business strategy to IT investment and execution.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">Strong Fit</div>
+            <ul>
+              <li>ARIS Business Architect - capability and journey mapping</li>
+              <li>Alfabet (Bizzdesign) - portfolio and IT alignment</li>
+              <li>Business capability mapping and gap analysis</li>
+              <li>Target-state architecture solutioning</li>
+              <li>IT demand management and investment prioritisation</li>
+              <li>Architecture alignment to strategy - CIO advisory</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Building / Developing</div>
+            <ul>
+              <li>TOGAF / ArchiMate formal certification</li>
+              <li>Deep cloud architecture design</li>
+              <li>Application rationalisation at scale</li>
+              <li>Direct EA programme delivery (post-sales)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-label">Key Experience</div>
+        <ul class="exp-bullets">
+          <li>Delivered <strong>business architecture demonstrations</strong> showing capability maps, target-state architectures, and process-to-technology linkage for FSI and government clients</li>
+          <li>Positioned and demonstrated <strong>Alfabet (Bizzdesign)</strong> for strategic portfolio management - showing CIOs how to align IT architecture to business strategy and prioritise investments</li>
+          <li>Built <strong>customised EA solutioning</strong> connecting process, organisational, technology, and data layers in a single coherent architecture view</li>
+          <li>Facilitated <strong>architecture discovery workshops</strong> with enterprise architects and IT strategy leads to define target-state capability maps</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">Key Skills for this Role</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">ARIS Business Architect</span>
+            <span class="skill-tag p">Alfabet / Bizzdesign</span>
+            <span class="skill-tag p">Capability Mapping</span>
+            <span class="skill-tag s">Strategic Portfolio Mgmt</span>
+            <span class="skill-tag s">IT Demand Management</span>
+            <span class="skill-tag s">Target-State Design</span>
+            <span class="skill-tag s">CIO Advisory</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">EA Platforms</span><span class="sb-stat-val">ARIS + Alfabet</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Approach</span><span class="sb-stat-val">Advisory / Pre-Sales</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Audience</span><span class="sb-stat-val">CIOs, Architects</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Get In Touch</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: Client Side -->
+  <div class="role-panel" id="panel-clientside">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">Business Transformation Advisor</div>
+          <div class="role-sub">Client-side BPM, EA, and process excellence - an honest assessment</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:65%"></div></div><span class="fit-pct">Partial Fit</span></div>
+        </div>
+        <p class="profile-text">I want to be transparent here. My background is <strong>vendor-side pre-sales</strong>, not direct client-side transformation delivery. What I bring is deep BPM and EA domain knowledge, extensive exposure to how organisations across banking, government, and telecom approach transformation challenges, and a strong ability to facilitate strategic conversations. What I have not done is <strong>own end-to-end delivery of a transformation programme</strong> as an internal or consulting resource.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">What I Bring</div>
+            <ul>
+              <li>Deep BPM and EA domain knowledge (7+ years)</li>
+              <li>Process architecture design and governance frameworks</li>
+              <li>Executive stakeholder facilitation and alignment</li>
+              <li>Business case and ROI development</li>
+              <li>Transformation challenge awareness across FSI, Gov, Telecom</li>
+              <li>Alfabet (Bizzdesign) IT portfolio and demand management</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Where I am Building</div>
+            <ul>
+              <li>Direct ownership of transformation delivery</li>
+              <li>Managing delivery teams and PMO</li>
+              <li>Organisational change management (formal)</li>
+              <li>Post-implementation governance and BAU</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">Honest Fit Assessment</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">BPM Domain Expertise</span>
+            <span class="skill-tag p">Architecture Design</span>
+            <span class="skill-tag s">Executive Facilitation</span>
+            <span class="skill-tag s">Roadmap Development</span>
+            <span class="skill-tag s">FSI / Gov Knowledge</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">Background</span><span class="sb-stat-val">Vendor / Pre-Sales</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Delivery Exp.</span><span class="sb-stat-val">Advisory / PoC</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Best Fit</span><span class="sb-stat-val">Advisory / Strategy</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Discuss the Role</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: AI -->
+  <div class="role-panel" id="panel-ai">
+    <div class="panel-grid">
+      <div>
+        <div class="role-head">
+          <div class="role-title">AI and Intelligent Automation Advisor</div>
+          <div class="role-sub">GenAI, Agentic AI, and process automation - emerging specialism</div>
+          <div class="fit-row"><span class="fit-lbl">Profile fit</span><div class="fit-track"><div class="fit-fill" style="width:60%"></div></div><span class="fit-pct">Developing Profile</span></div>
+        </div>
+        <p class="profile-text">Being transparent: <strong>AI and intelligent automation is an emerging specialism for me</strong>, not an established one. My hands-on experience comes from working with <strong>AI-augmented process intelligence tooling</strong> in a pre-sales context. I have been actively building understanding of <strong>Agentic AI frameworks, LLM orchestration,</strong> and prompt engineering. I would be a strong fit for roles combining deep process and domain knowledge <strong>with</strong> genuine AI curiosity - not roles requiring proven AI delivery credentials.</p>
+        <div class="two-col">
+          <div class="list-card strengths">
+            <div class="list-card-title g">What I Bring</div>
+            <ul>
+              <li>AI-augmented process intelligence tooling - hands-on pre-sales</li>
+              <li>Prompt engineering for process and architecture use cases</li>
+              <li>Agentic AI frameworks - conceptual and applied understanding</li>
+              <li>LLM orchestration concepts and RAG fundamentals</li>
+              <li>Translating AI capability into business value narratives</li>
+              <li>Strong domain context for AI value in FSI / Gov</li>
+            </ul>
+          </div>
+          <div class="list-card gaps">
+            <div class="list-card-title a">Where I am Building</div>
+            <ul>
+              <li>Python-based AI/ML development</li>
+              <li>LangChain / AutoGen implementation</li>
+              <li>Cloud AI infrastructure (Azure OpenAI, AWS Bedrock)</li>
+              <li>Formal AI delivery credentials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sb-title">AI Capability Snapshot</div>
+          <div class="skill-tags">
+            <span class="skill-tag p">AI-Augmented Process Intelligence</span>
+            <span class="skill-tag p">Prompt Engineering</span>
+            <span class="skill-tag p">Agentic AI Frameworks</span>
+            <span class="skill-tag s">LLM Orchestration</span>
+            <span class="skill-tag s">RAG Fundamentals</span>
+            <span class="skill-tag s">AI Value Narratives</span>
+          </div>
+          <hr class="sb-divider">
+          <div class="sb-stat"><span class="sb-stat-lbl">AI Experience</span><span class="sb-stat-val">Applied / Pre-Sales</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Stage</span><span class="sb-stat-val">Active / Emerging</span></div>
+          <div class="sb-stat"><span class="sb-stat-lbl">Best Fit</span><span class="sb-stat-val">Advisory + AI Hybrid</span></div>
+          <a href="mailto:mohammadshoaibosmani@gmail.com" class="cta-btn">Discuss the Role</a>
+          <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="cta-btn sec">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-wrap" id="about">
+<div class="wrap">
+  <div class="sec-title">About</div>
+  <div class="sec-rule"></div>
+  <div class="about-grid">
+    <div>
+      <div class="about-block-title">The Work</div>
+      <p>I have spent 7+ years as a pre-sales business architect specialising in enterprise process intelligence, BPM, and EA platforms across the GCC. My work is client-facing and commercial: helping enterprises understand what is possible, demonstrating it in a way that resonates with their specific challenges, and building the business case to act on it. Primary platforms are ARIS (Software AG) and Alfabet (now Bizzdesign).</p>
+    </div>
+    <div>
+      <div class="about-block-title">The Market</div>
+      <p>I operate across the GCC and MENA region - banking, government, telecom, and retail clients. I understand how buying decisions are made in this market, how to navigate C-suite relationships in the Gulf, and how to position enterprise software in environments where proof of value must be earned, not assumed.</p>
+    </div>
+    <div>
+      <div class="about-block-title">The Direction</div>
+      <p>I am looking to take my pre-sales and architecture expertise into a role with broader scope - whether a more senior solution engineering position, a business architecture advisory role, or a technology firm where AI and data are the core product. I value organisations that take domain expertise seriously alongside technical depth.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CAREER -->
+<section class="career-wrap" id="career">
+<div class="wrap">
+  <div class="sec-title">Career</div>
+  <div class="sec-rule"></div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dates">Aug 2018 - Present</div>
+      <div class="tl-role">Senior Pre-Sales Business Architect</div>
+      <div class="tl-company">ARIS (Software AG) - Dubai, UAE</div>
+      <div class="tl-desc">Leading pre-sales solutioning across MENA for enterprise BPM, Process Mining, and Enterprise Architecture platforms. Responsible for 30+ enterprise engagements from qualification through commercial close. Parallel solutioning experience with Alfabet (now Bizzdesign) for strategic portfolio management and IT architecture alignment. Awarded Top Pre-Sales Achiever for the MENA region in 2024.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dates">Aug 2017 - Jun 2018</div>
+      <div class="tl-role">Pre-Sales Graduate</div>
+      <div class="tl-company">Software AG - Sydney, Australia</div>
+      <div class="tl-desc">Built demo environments and PoCs for enterprise process management solutions for APAC prospects. Developed process analytics dashboards and supported Account Executives with go-to-market activities.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dates">Jan 2017 - Feb 2017</div>
+      <div class="tl-role">Pre-Sales Intern</div>
+      <div class="tl-company">Software AG - Dubai, UAE</div>
+      <div class="tl-desc">Hands-on exposure to enterprise process modelling, organisational dependency mapping, and KPI dashboard configuration under senior business architects.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-wrap" id="tools">
+<div class="wrap">
+  <div class="sec-title">Tools and Expertise</div>
+  <div class="sec-rule"></div>
+  <div class="tools-grid">
+    <div class="tool-card"><div class="tool-name">ARIS Platform</div><div class="tool-level">Expert - 7+ Years</div><div class="tool-bar"><div class="tool-fill e" style="width:95%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">ARIS Process Mining</div><div class="tool-level">Advanced</div><div class="tool-bar"><div class="tool-fill a" style="width:85%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">ARIS Business Architect</div><div class="tool-level">Advanced</div><div class="tool-bar"><div class="tool-fill a" style="width:85%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">Alfabet / Bizzdesign</div><div class="tool-level">Proficient - Pre-Sales Level</div><div class="tool-bar"><div class="tool-fill p" style="width:70%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">ARIS Aware Dashboards</div><div class="tool-level">Advanced</div><div class="tool-bar"><div class="tool-fill a" style="width:82%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">Prompt Engineering</div><div class="tool-level">Applied / Growing</div><div class="tool-bar"><div class="tool-fill p" style="width:65%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">Agentic AI Frameworks</div><div class="tool-level">Foundational / Active Study</div><div class="tool-bar"><div class="tool-fill d" style="width:50%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">SAP Integration</div><div class="tool-level">Working Knowledge</div><div class="tool-bar"><div class="tool-fill d" style="width:55%"></div></div></div>
+    <div class="tool-card"><div class="tool-name">SQL</div><div class="tool-level">Working Knowledge</div><div class="tool-bar"><div class="tool-fill d" style="width:50%"></div></div></div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card"><div class="edu-year">2022</div><div class="edu-degree">MSc Business Innovation and Entrepreneurship</div><div class="edu-school">University of Wollongong, Dubai</div></div>
+    <div class="edu-card"><div class="edu-year">2018</div><div class="edu-degree">Graduate Diploma in Business Information Systems</div><div class="edu-school">University of Sydney, Australia</div></div>
+    <div class="edu-card"><div class="edu-year">2017</div><div class="edu-degree">Bachelor of Commerce - International Business</div><div class="edu-school">University of Wollongong, Australia</div></div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-wrap" id="contact">
+<div class="wrap">
+  <div class="sec-title">Get In Touch</div>
+  <div class="sec-rule"></div>
+  <p class="sec-intro">Open to conversations about the right opportunity. Happy to provide a tailored CV for any specific role.</p>
+  <div class="contact-grid">
+    <div class="contact-links">
+      <a href="mailto:mohammadshoaibosmani@gmail.com" class="contact-link">
+        <div class="contact-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" color="#94a3b8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+        mohammadshoaibosmani@gmail.com
+      </a>
+      <a href="tel:+971552027531" class="contact-link">
+        <div class="contact-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" color="#94a3b8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
+        +971 55 202 7531
+      </a>
+      <a href="https://linkedin.com/in/shoaibosmani" target="_blank" class="contact-link">
+        <div class="contact-icon"><svg fill="#94a3b8" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></div>
+        linkedin.com/in/shoaibosmani
+      </a>
+      <span class="contact-link">
+        <div class="contact-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" color="#94a3b8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
+        Dubai, United Arab Emirates
+      </span>
+    </div>
+    <div class="contact-note">
+      "I am at a stage in my career where I am looking for depth and scope - not just the next role. If you are building something in process intelligence, enterprise architecture, or AI-augmented advisory and you think my background is relevant, I would genuinely welcome a conversation."
+      <cite>- Shoaib Osmani, Dubai 2025</cite>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="site-footer">Mohammad Shoaib Osmani &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; mohammadshoaibosmani@gmail.com &nbsp;·&nbsp; linkedin.com/in/shoaibosmani</footer>
+
+<script>
+function switchRole(id) {
+  document.querySelectorAll('.role-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.role-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
+  document.getElementById('roles').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function toggleNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+</script>
+</body>
+</html>
